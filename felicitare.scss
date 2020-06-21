@@ -1,0 +1,82 @@
+
+body {
+  background: #22222D;
+   position: relative;
+  margin: 0;
+  height: 100%;
+  font-family: "Vibur", cursive;
+}
+.main {
+  width: 100vw;
+ height: 100vh;
+  position: relative;
+
+  
+}
+.circle {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 25px;
+  height: 25px;
+  transition: left 0.5s ease, top 1s ease;
+  border-radius: 50%;
+}
+
+/*-- Sign Styles --*/
+
+.sign {
+    width: 100%;
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__word {
+    font-size: 8vw;
+    z-index: 15;
+    text-align: center;
+    line-height: 1;
+    animation: neon .08s 1.5s ease-in-out infinite alternate, appear 5s ease-in-out forwards;
+  }
+
+  
+  
+}
+
+/*-- Animation Keyframes --*/
+
+// animation
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+@keyframes appear {
+    from {
+      color: transparent;
+    }
+    to {
+      color: #c6e2ff;
+    }
+  }
+  
+
+
